@@ -22,6 +22,9 @@
                     <span class="company-name">clever cloud</span>
                 </div>
             </div>
+            <div class="header-row-burger">
+                <img src="../img/icons/open-menu.png" alt="" class="header-row-burger-img">
+            </div>
             <nav class="header-row__nav">
                 <ul class="header-row__nav-list">
                     <li class="header-row__nav-list__item"><a href="#">Doc</a></li>
@@ -40,21 +43,26 @@
             </nav>
         </div>
     </header>
+
     <div class="welcome-block">
         <div class="welcome-block__content">
-            <h1>Everything<br/> but <span class="red">the code</span></h1>
-            <p>Clever Cloud handles all the ops work while you focus on your true business value: coding</p>
-            <div class="welcome-block__content__links">
-                <a href="#" class="welcome-block__content__links-item free-trial">Free Trial</a>
-                <a href="#" class="welcome-block__content__links-item git-btn">
-                    <div>
-                        <img src="../img/git.png" alt="">
-                    </div>
-                    <span>Login with GitHub</span>
-                </a>
+            <div>
+                <h1>Everything<br/> but <span class="red">the code</span></h1>
+                <p>Clever Cloud handles all the ops work while you focus on your true business value: coding</p>
             </div>
-            <div class="welcome-block__content__contact">
-                <p>or<a href="#" class="welcome-block__content__links-item"> Contacts Our Sales</a></p>
+            <div>
+                <div class="welcome-block__content__links">
+                    <a href="#" class="welcome-block__content__links-item free-trial">Free Trial</a>
+                    <a href="#" class="welcome-block__content__links-item git-btn">
+                        <div>
+                            <img src="../img/git.png" alt="">
+                        </div>
+                        <span>Login with GitHub</span>
+                    </a>
+                </div>
+                <div class="welcome-block__content__contact">
+                    <p>or<a href="#" class="welcome-block__content__links-item"> Contacts Our Sales</a></p>
+                </div>
             </div>
             <div class="welcome-block__content__ornament">
                 <img src="../img/ornament.png" alt="">
@@ -349,7 +357,6 @@
             <img src="../img/ornament.png" alt="">
         </div>
     </div>
-
     <div class="blog">
         <div class="blog__main">
             <div class="blog__main-title">
@@ -447,7 +454,6 @@
             <img src="../img/ornament.png" alt="">
         </div>
     </div>
-
     <div class="register">
         <div class="register__img">
             <img src="../img/reg-img.svg" alt="">
@@ -583,4 +589,18 @@
     </footer>
 </div>
 </body>
+
+<script>
+    let burgerMenu = document.querySelector('.header-row-burger-img');
+    let burgerList = document.querySelector('.header-row__nav');
+
+    burgerMenu.addEventListener('click', () => {
+        if (burgerList.style.display !== "none")
+            burgerList.style.display = "none";
+        else
+            burgerList.style.display = "flex";
+    })
+
+</script>
+
 </html>
