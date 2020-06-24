@@ -1042,6 +1042,10 @@ footer {
     .register__form__container-info p{
         text-align: center;
     }
+
+    .clients__links .welcome-block__content__links-item{
+        min-width: 300px;
+    }
 }
 
 @media all and (max-width: 720px) {
