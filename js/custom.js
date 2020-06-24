@@ -42,35 +42,37 @@ let testimalArray = [
 let testimonialArrowNext = document.querySelector('.js-testimonial-arrows-next img');
 let testimonialArrowPrev = document.querySelector('.js-testimonial-arrows-back img');
 
-let testimalCounter = 0;
-let testimonialContainer = document.querySelector('.testimonial-container');
-let testimalTitle = testimonialContainer.querySelector('.h2-title');
-let testimalText = testimonialContainer.querySelector('.testimonial__text-item p');
-let testimalAuthor = testimonialContainer.querySelector('.testimonial__text-item .testimonial__text-item-author');
-let testimalJob = testimonialContainer.querySelector('.testimonial__text-item .testimonial__text-item-job');
-let testimalImg = document.querySelector('.testimonial .testimonial__img img');
+if (testimonialArrowNext !== null) {
+    let testimalCounter = 0;
+    let testimonialContainer = document.querySelector('.testimonial-container');
+    let testimalTitle = testimonialContainer.querySelector('.h2-title');
+    let testimalText = testimonialContainer.querySelector('.testimonial__text-item p');
+    let testimalAuthor = testimonialContainer.querySelector('.testimonial__text-item .testimonial__text-item-author');
+    let testimalJob = testimonialContainer.querySelector('.testimonial__text-item .testimonial__text-item-job');
+    let testimalImg = document.querySelector('.testimonial .testimonial__img img');
 
-testimonialArrowNext.addEventListener('click', () => {
-    if (testimalCounter < testimalArray.length - 1) testimalCounter++;
-    else testimalCounter = 0;
+    testimonialArrowNext.addEventListener('click', () => {
+        if (testimalCounter < testimalArray.length - 1) testimalCounter++;
+        else testimalCounter = 0;
 
-    testimalRender(testimalCounter);
-});
+        testimalRender(testimalCounter);
+    });
 
-testimonialArrowPrev.addEventListener('click', () => {
-    if (testimalCounter > 0) testimalCounter--;
-    else testimalCounter = testimalArray.length - 1;
+    testimonialArrowPrev.addEventListener('click', () => {
+        if (testimalCounter > 0) testimalCounter--;
+        else testimalCounter = testimalArray.length - 1;
 
-    testimalRender(testimalCounter);
-});
+        testimalRender(testimalCounter);
+    });
 
-let testimalRender = (index) =>{
-    testimalTitle.innerText = testimalArray[index].title;
-    testimalText.innerText = testimalArray[index].text;
-    testimalAuthor.innerText = testimalArray[index].author;
-    testimalJob.innerText = testimalArray[index].job;
-    testimalImg.src = testimalArray[index].imgUrl;
-};
+    let testimalRender = (index) =>{
+        testimalTitle.innerText = testimalArray[index].title;
+        testimalText.innerText = testimalArray[index].text;
+        testimalAuthor.innerText = testimalArray[index].author;
+        testimalJob.innerText = testimalArray[index].job;
+        testimalImg.src = testimalArray[index].imgUrl;
+    };
+}
 
 // -------------------------------------------------------------------------------------------------------
 // Work with footer
