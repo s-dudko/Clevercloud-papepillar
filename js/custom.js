@@ -1,8 +1,8 @@
 'use strict';
 
 // Work with burger menu
-let burgerMenu = document.querySelector('.header-row-burger-img');
-let burgerList = document.querySelector('.header-row__nav');
+let burgerMenu = document.querySelector('.js-header-row-burger-img');
+let burgerList = document.querySelector('.js-header-row__nav');
 
 burgerMenu.addEventListener('click', () => {
     if (burgerList.style.display === "" || burgerList.style.display === "none")
@@ -39,8 +39,8 @@ let testimalArray = [
     }
 ];
 
-let testimonialArrowNext = document.querySelector('.testimonial-arrows-next img');
-let testimonialArrowPrev = document.querySelector('.testimonial-arrows-back img');
+let testimonialArrowNext = document.querySelector('.js-testimonial-arrows-next img');
+let testimonialArrowPrev = document.querySelector('.js-testimonial-arrows-back img');
 
 let testimalCounter = 0;
 let testimonialContainer = document.querySelector('.testimonial-container');
@@ -74,11 +74,13 @@ let testimalRender = (index) =>{
 
 // -------------------------------------------------------------------------------------------------------
 // Work with footer
-let footerNavList = document.querySelector('.footer-nav');
+let footerNavList = document.querySelector('.js-footer-nav');
 
 for (let i = 0; i < footerNavList.children.length; i++){
+
     footerNavList.children[i].addEventListener('click', () => {
-        let footerItem = footerNavList.children[i].querySelector('.footer-nav__item-list');
+        let footerItem = footerNavList.children[i].querySelector('.js-footer-nav__item-list');
+
         if (footerItem.style.display === "" || footerItem.style.display === "none")
             footerItem.style.display = "block";
         else
